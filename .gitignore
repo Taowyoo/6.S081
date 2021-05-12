@@ -23,3 +23,4 @@ submissions/
 .clangd/
 .vscode/
 *.pyc
+.clang-format
