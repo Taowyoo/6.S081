@@ -22,3 +22,7 @@ xv6.out*
 .clangd/
 .vscode/
 .clang-format
+.cache
+.idea
+compile_commands.json
+
