@@ -133,6 +133,7 @@ mkfs/mkfs: mkfs/mkfs.c $K/fs.h $K/param.h
 .PRECIOUS: %.o
 
 UPROGS=\
+	$U/_sysinfotest\
 	$U/_trace\
 	$U/_cat\
 	$U/_echo\
