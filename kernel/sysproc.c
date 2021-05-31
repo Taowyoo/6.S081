@@ -6,6 +6,7 @@
 #include "memlayout.h"
 #include "spinlock.h"
 #include "proc.h"
+#include "sysinfo.h"
 
 uint64
 sys_exit(void)
@@ -106,5 +107,24 @@ sys_trace(void)
   if (mask < 0)
     return -1;
   myproc()->tracemask = mask;
+  return 0;
+}
+
+// get current system info and save it into a sysinfo struct
+uint64
+sys_sysinfo(void)
+{
+  uint64 si;  // user pointer to struct sysinfo
+  // get the argument: sysinfo pointer
+  if(argaddr(0, &si) < 0)
+    return -1;
+  struct sysinfo info;
+  // get current system info
+  info.freemem = kget_free_mem_num();
+  info.nproc = procnum();
+  // copy sysinfo to the given pointer which at user space
+  struct proc *p = myproc();
+  if(copyout(p->pagetable, si, (char *)&info, sizeof(info)) < 0)
+    return -1;
   return 0;
 }
