@@ -90,7 +90,7 @@ kget_free_mem_num(void)
   r = kmem.freelist;
   while(r) {
     r = r->next;
-    res += 4096;
+    res += PGSIZE;
   }
   release(&kmem.lock);
   return res;
