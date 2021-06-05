@@ -5,7 +5,7 @@ My solutions for 6.S081 Fall 2020 labs
 ## Progress
 
 - [x] [Lab util: Unix utilities](https://github.com/Taowyoo/6.S081/tree/util-solution)
-- [ ] [Lab syscall: System calls](https://pdos.csail.mit.edu/6.828/2020/labs/syscall.html)
+- [x] [Lab syscall: System calls](https://github.com/Taowyoo/6.S081/tree/syscall-solution)
 - [ ] [Lab pgtbl: Page tables](https://pdos.csail.mit.edu/6.828/2020/labs/pgtbl.html)
 - [ ] [Lab traps: Trap](https://pdos.csail.mit.edu/6.828/2020/labs/traps.html)
 - [ ] [Lab lazy: Lazy allocation](https://pdos.csail.mit.edu/6.828/2020/labs/lazy.html)
