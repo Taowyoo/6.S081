@@ -20,9 +20,12 @@ myapi.key
 xv6.out*
 .vagrant/
 submissions/
-.clangd/
-.vscode/
+
+# Personal Ignore
 *.pyc
 .clang-format
+.vscode/
+.clangd/
+compile_commands.json
 .cache/
 .idea/

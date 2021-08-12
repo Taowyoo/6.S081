@@ -138,6 +138,8 @@ UPROGS=\
 	$U/_primes\
 	$U/_pingpong\
 	$U/_sleep\
+	$U/_sysinfotest\
+	$U/_trace\
 	$U/_cat\
 	$U/_echo\
 	$U/_forktest\
@@ -179,9 +181,7 @@ UPROGS += \
 endif
 
 UEXTRA=
-ifeq ($(LAB),util)
-	UEXTRA += user/xargstest.sh
-endif
+UEXTRA += user/xargstest.sh
 
 fs.img: mkfs/mkfs README $(UEXTRA) $(UPROGS)
 	mkfs/mkfs fs.img README $(UEXTRA) $(UPROGS)
