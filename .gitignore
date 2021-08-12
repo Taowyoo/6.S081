@@ -24,3 +24,5 @@ submissions/
 .vscode/
 *.pyc
 .clang-format
+.cache/
+.idea/
